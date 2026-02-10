@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .box {
+        background: rgba(0,0,0,0.25);
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 350px;
+        width: 90%;
+        animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 12px 22px;
+        border: none;
+        border-radius: 25px;
+        background: white;
+        color: #ff4f81;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        background: #ffe1ea;
+    }
+
+    .promise {
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: bold;
+        min-height: 60px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box" id="content">
+    <h1>Hey My Love ❤️</h1>
+    <p>I made this little world just for you.</p>
+    <button onclick="nextStep()">Start 💕</button>
+</div>
+
+<script>
+let step = 0;
+
+const promises = [
+    "I promise to always respect you 💖",
+    "I promise to stand by you in every situation 🤍",
+    "I promise to make you smile even on bad days 😊",
+    "I promise to grow with you, not away from you 🌱",
+    "I promise to love you honestly and deeply ❤️",
+    "I promise to hold your bag without shame 👜",
+    "I promise to pretend Im wrong even when Im right 😇",
+    "I promise to watch your favorite shows without complaining 🎬",
+    "I promise to tolerate your mood swings with love 😂",
+     "I promise to hold your hand whenever you need comfort 🤍",
+    "I promise to kiss your forehead when words fail 😘",
+    "I promise to protect your heart like its my own 💖",
+    "I promise to choose you every single day 💫",
+    "I promise to be your safe place 🏡",
+    "I promise to respect you always 🤍",
+    "I promise to never take you for granted 💞",
+      "I promise to stay even when things get hard 🛡️",
+  "I promise to fight for us, not against you ⚔️❤️",
+  "I promise to heal with you, not hurt you 🌿",
+  "I promise to be patient when youre tired 😔",
+  "I promise to stand by you when the world feels heavy 🌍",
+  "I promise to respect your past and protect our future 🕊️",
+  "I promise to never make you feel alone 🤝",
+  "I promise to be emotionally present 🧠❤️",
+     "I promise to surprise you randomly 🎁",
+  "I promise to make memories with you 📸",
+  "I promise to plan cute dates 💐",
+  "I promise to hold you close on bad days 🤗",
+  "I promise to love you loudly and quietly 💓",
+  "I promise to keep falling for you 😍",
+  "I promise to remind you how special you are ✨",
+  "I promise to never stop flirting with you 😌",
+      "I promise to communicate instead of disappearing 🗣️",
+  "I promise to apologize when Im wrong 🙏",
+  "I promise to improve myself for us 📈",
+  "I promise to be consistent 🔁",
+  "I promise to trust you fully 🔐",
+  "I promise to keep learning about you 📖",
+  "I promise to value your time ⏳",
+  "I promise to buy you Chanel perfume 💄",
+  "I promise to buy you YSL  😌",
+  "I promise to spoil you whenever I can 🛍️",
+  
+  "I promise to gift you without occasions 🎀",
+  "I promise to always try to give you the best 💎",
+    "I promise to stay loyal 🤍",
+  
+  "I promise to walk beside you, not ahead or behind 🚶‍♂️🚶‍♀️",
+  "I promise to build a future with you 🏗️",
+  "I promise to protect our bond 🪢",
+  "I promise to never stop choosing us 💑",
+  "I promise to love you ☀️",
+  "I promise to grow old with you 👵👴",
+  "kya ma padru ",
+  "I promise that alllah gavah hay meary pyar ka 🤍"
+];
+
+function nextStep() {
+    const content = document.getElementById("content");
+
+    if (step === 0) {
+        content.innerHTML = `
+            <h1>Let’s Play 😌</h1>
+            <p>Click the button to see my promises.</p>
+            <button onclick="nextStep()">Show Promises ✨</button>
+        `;
+    }
+
+    else if (step === 1) {
+        content.innerHTML = `
+            <h1>My Promises 🤞</h1>
+            <div class="promise" id="promiseText"></div>
+            <button onclick="showPromise()">Another Promise 💝</button>
+            <button onclick="nextStep()">Final Message 🫶</button>
+        `;
+        showPromise();
+    }
+
+    else if (step === 2) {
+        content.innerHTML = `
+            <h1>For You ❤️</h1>
+            <p>
+                No fancy words can fully explain what you mean to me.<br><br>
+                But I want you to know this:
+            </p>
+            <h2 style="margin-top:20px;">
+                alllah gavah hay meary pyar ka
+            </h2>
+        `;
+    }
+
+    step++;
+}
+
+function showPromise() {
+    const random = Math.floor(Math.random() * promises.length);
+    document.getElementById("promiseText").innerText = promises[random];
+}
+</script>
+
+</body>
+</html>
